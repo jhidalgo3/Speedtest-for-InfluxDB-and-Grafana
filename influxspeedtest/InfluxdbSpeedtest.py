@@ -38,7 +38,7 @@ class InfluxdbSpeedtest():
         )
         try:
             log.debug('Testing connection to InfluxDb using provided credentials')
-            influx.get_list_users()  # TODO - Find better way to test connection and permissions
+            #influx.get_list_users()  # TODO - Find better way to test connection and permissions
             log.debug('Successful connection to InfluxDb')
         except (ConnectTimeout, InfluxDBClientError, ConnectionError) as e:
             if isinstance(e, ConnectTimeout):
@@ -47,6 +47,7 @@ class InfluxdbSpeedtest():
                 log.critical('Unable to connect to InfluxDB with provided credentials')
             else:
                 log.critical('Failed to connect to InfluxDB for unknown reason')
+                log.error(e)
 
             sys.exit(1)
 
