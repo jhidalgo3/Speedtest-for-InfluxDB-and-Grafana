@@ -1,8 +1,8 @@
-version: '2'
+version: '3'
 services:
   speedtest:
-    image: barrycarey/speedtest-for-influxdb-and-grafana
-    container_name: speedtest
+    image: jhidalgo3/speedtest
+    #container_name: speedtest
     volumes:
-      - ./config.ini:/src/config.ini
+      - $PWD/config.ini:/src/config.ini
     restart: always

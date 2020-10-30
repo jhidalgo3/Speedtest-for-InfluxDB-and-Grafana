@@ -1,5 +1,5 @@
-FROM python:alpine
-MAINTAINER Barry Carey <mcarey66@gmail.com>
+FROM python:3.6.8-alpine
+MAINTAINER Jose Maria Hidalgo Garcia <jhidalgo3@gmail.com>
 
 VOLUME /src/
 COPY influxspeedtest.py requirements.txt config.ini /src/
