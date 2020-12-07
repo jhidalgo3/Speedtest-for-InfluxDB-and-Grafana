@@ -1,0 +1,8 @@
+version: '3'
+services:
+  speedtest:
+    image: jhidalgo3/speedtest:2.0
+    #container_name: speedtest
+    #volumes:
+    #  - $PWD/config.ini:/src/config.ini
+    restart: always
